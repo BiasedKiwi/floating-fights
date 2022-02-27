@@ -1,9 +1,11 @@
 name: Pylint
 
-on: [push]
+on:
+  push:
+    branches: ["main", "develop"]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
